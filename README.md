@@ -42,6 +42,35 @@ Exploring the ice sheet velocity change of Whillans Ice Plain, West Antarctica b
 - Cartopy
 
 
+One line is plotted for each axis, and they are color-coated
+
+# Project Methodology and Outcomes
+
+## Planned Methodology
+Based on the GPS station locations used for the tidal features present in another dataset (Kaitlyn’s icequake project), determine the spatial region that will be used for looking at the velocities. Then, using **EarthData** and **ITS_LIVE**, open the relevant datacube tiles.
+
+### Data Collection & Processing
+* **Velocity Field:** Get the full velocity field across the region of interest for all available timestamps between 2008-2019 to create a spatiotemporal array.
+* **Data Cleaning:** 
+    * Remove filler values and incorrect data points.
+    * Drop measurements with component uncertainties above a certain threshold (e.g., 50 m/yr).
+* **Spatial Mapping:** Create maps of average velocity and velocity trends (linear slope) for each grid cell.
+* **Point Time Series:** Extract at GPS locations by reprojecting coordinates to the Antarctic polar stereographic coordinate system.
+* **Interpolation:** Adjust data to match the temporal resolution of the tidal data set.
+* **Analysis:** Look at temporal variability using trends, rolling means, and standard deviations.
+* **Correlations:** Perform correlations between the velocity time series.
+
+## Expected Outcomes & Observations
+* The velocity is decreasing over time and is non-uniform across the ice plain.
+* Velocity acceleration changes are correlated with the timing of stick-slip events and tidal forcings.
+
+### Proposed Figures
+1. **Figure 1 (Spatial Velocity):** Two plots: a bar chart of velocity vs GPS station coordinates and a line graph of velocity over time (years).
+2. **Figure 2 (Slip Prediction):** Scatter plot of 30-day prior mean vs time-to-next-slip, color-coded by record position.
+3. **Figure 3 (Heatmap):** Velocity correlation with other features.
+4. **Figure 4 (Prediction Accuracy):** True vs. predicted time-to-next-slip (with/without velocity feature).
+5. **Figure 5 (Time Series):** Two-axis plot of velocity and rolling mean slip occurrence over time.
+
 
 
  
