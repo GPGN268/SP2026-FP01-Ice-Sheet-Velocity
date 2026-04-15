@@ -36,12 +36,12 @@ Figure demonstrating location of Whillans Ice Plain [1].
 - Statement:
   - Although GPS studies have shown at specific locations that ice sheet velocity at Whillans Ice Stream has slowed, how that deceleration has changed over the full ice sheet, how the velocity fluctuates across different time scales, and if there is a correlation between the velocity change and stick-slip events and tidal forcings, is still not well documented.
 
--  Questions:
+- Questions:
   - Are there detectable relationships between ice surface velocity, timing of stick-slip events, and tidal forcings?
   - How has the temporal variability of ice surface velocity changed between 2008 and 2019, and how does it vary on seasonal/decadal timescales?
   - What are the spatial patterns of ice surface velocity/how does the magnitude of velocity slowing vary between different features of the ice sheet (such as the grounding zone, the middle of the ice sheet, and the margins). 
  
--  Objectives:
+- Objectives:
   - Compute and clean velocity from PPP files derived from GNSS data at various GPS locations across Whillans Ice Plain to produce figures that show how velocity has changed over time and space.
   - Identify correlations between velocity, tidal forcings, and stick-slip timings.
 
