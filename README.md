@@ -73,7 +73,12 @@ Figure demonstrating location of Whillans Ice Plain [1].
   - Show different smoothing techniques to clean the background velocity data 
   - Plot of velocity time series (one for each station)
   - Plot how the change in velocity corresponds to the stick-slip events 
-
+## Figure Creation:
+- Figure 1: Plot raw 15-second epoch positions (scatter of lat/long or projected east/north), color-coded by rmsp. Overlay the position threshold = 0.05m cutoff line on a histogram inset to show how many epochs are dropped. This will need to live inside the first function. 
+- Figure 2: A 2D pcolormesh with time on the x-axis, station (sorted spatially) on the y-axis, and the 30-day smoothed velocity as color. Use cartopy basemap as context. 
+- Figure 3: Three panel plot for one representative station showing (a) raw inter-epoch velocity, (b) daily median velocity, (c) 30-day rolling median. Let's add noise stats (like std) to each panel also. 
+- Figure 4: One line per station for velocity time-series (let's make those lines semi-transparent) then a more opaque 30-daysmoothed line on top with a colormap to show spatail coherence across the ice stream
+- Figure 5: For each station plot the 30-day background velocity as a time series. Overlay vertical lines at each icequake start time. Could also add a second-axis with the time between slips. 
 ## Expected outcomes:
 - Expected observations:
   - The velocity is decreasing over time and is non-uniform across the ice plain. 
