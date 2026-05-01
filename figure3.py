@@ -42,7 +42,7 @@ ax1 = axes[0]
 ax1.set_facecolor("#FAFBFC")
 for spine in ax1.spines.values():
     spine.set_edgecolor("#CCCCCC")
-ax1.scatter(timestamps, daily_median, s=1.5, alpha=0.4, color="#4A90D9",
+ax1.scatter(timestamps, daily_median, s=3, alpha=0.8, color="#1a1a2e",
             linewidths=0, rasterized=True)
 ax1.set_ylabel("Velocity  (m yr⁻¹)", fontsize=10, color="#444")
 ax1.set_title("(a)  Daily velocity estimates", fontsize=10,
