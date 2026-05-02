@@ -11,8 +11,7 @@ Exploring the temporal and spatial variability in  ice sheet velocity change of 
 - This project will explore how the velocity of the Whillans Ice Plain in West Antarctica changed between 2008 and 2019, as well as how it changed spatially using GPS and GNSS data. The primary output is figures that show preprocessing changes, the spatial and temporal patterns of velocity, and correlations between velocity change stick-slip events.
 
 ## How to Use Repository: 
- &nbsp; The main code for this workflow can be found in the Notebooks folder in the extract_and_preproc notebook. In order to run it, two files will need to be downloaded from the Katz et al., 2026 Zenodo: the PPP.zip and the Events.zip. The files then need to be extracted and placed in a Data folder in the SP2026-FP01-Ice-Sheet-Velocity directory. Adjust the directory such that these path configurations are accurate: PPP_dir = "../Data/PPP/PPP/"
-Events_csv = "../Data/whillans_velocity_per_event.csv". The script in the extract notebook is fully contained. Once it runs, the figure notebooks can be run in any order. Each figure notebook takes inputs that are generated from the extraction notebook and outputs figures in the figure file. It is worth noting that the extraction notebook has a run time of about 3 hours, however, the cleaned and preprocessed data is save to a csv in the data directory so that any figure can be generated and edited without having to rerun that notebook more than once.   
+ &nbsp; The main code for this workflow can be found in the Notebooks folder in the extract_and_preproc notebook. In order to run it, the PPP.zip file will need to be downloaded from the Katz et al., 2026 Zenodo. The file should then be extracted and placed in a Data folder in the SP2026-FP01-Ice-Sheet-Velocity directory. Adjust the directory such that the path configuration is accurate: PPP_dir = "../Data/PPP/PPP/". Additionally, in order to get the preprocessed stick-slip catalog, the Whillians-GPS-Data-and-Features.csv should be downloaded from the Mines Glaciology Github and put in the same file folder. The script in the extract notebook is fully contained. Once it runs, the figure notebooks can be run in any order. Each figure notebook takes inputs that are generated from the extraction notebook and outputs figures in the figure file. It is worth noting that the extraction notebook has a run time of about 3 hours, however, the cleaned and preprocessed data is save to a csv in the data directory so that any figure can be generated and edited without having to rerun that notebook more than once.   
 
 ## Introduction:
 ![Ice Study Location](images/IceStudyLocation.gif)
@@ -24,7 +23,7 @@ Figure demonstrating location of Whillans Ice Plain [1].
  
  &nbsp;  Since the spatial and temporal resolution over time determines how ice is moving in the interior of the ice stream and at the margins, having better constraints of this motion would allow us to better estimate how the Whillans ice stream motion will behave in the future[1].
 
- &nbsp;  Based on current GPS records and a catalog of stick-slip events, it is expected to find that Whillians deceleration varies through time (such as on interannual timescales) and that the velocity varies spatially across features such as the grounding line and grounded versus floating ice[3-6].
+ &nbsp;  Based on current GPS records and a catalog of stick-slip events, it is expected to find that Whillians deceleration varies through time (such as on interannual timescales) and that the velocity varies spatially across features such as the grounding line and grounded versus floating ice [3-6].
  
 ## Research Questions: 
 - How does the ice sheet velocity vary across Whillans Ice Plain on a decadal time scale?
@@ -37,6 +36,7 @@ Figure demonstrating location of Whillans Ice Plain [1].
 
 ## Datasets:
 - Whillans Ice Plain GNSS RINEX, Kinematic Positions, and Stick-Slip Event Catalog [PPP Files from Zenodo](https://zenodo.org/records/17797751)
+- Whillans Ice Plain Stick Slip Events [Event catalog](https://github.com/MinesGlaciology/whillans-surf/blob/main/notebooks/data_preproc/09-18.csv)
 
 ## Tools/Packages: 
 - Os [Os](https://docs.python.org/3/library/os.html)
