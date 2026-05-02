@@ -72,7 +72,7 @@ Figure demonstrating location of Whillans Ice Plain [1].
 ## Contribution Statement: 
 - Kaitlyn: Extraction and preprocessing, project introduction, slideshow, figure 1 and 3 interpretation, findings analysis, README final requirements, repository formatting  
 - Emilia: Figure 2, 4, and 5 and the corresponding interpretation, repository clean up, and README picture 
-- Kadida: Stats, exploratory figures, Figure 1 and 3, and initial README updates  
+- Kadidia: Stats, exploratory figures, Figure 1 and 3, and initial README updates  
 
 ## Anticipated Challenges: 
 - We were originally going to use ITS_LIVE velocity data derived from Sentinel-1. However, there was a gap in coverage for this region of Antarctica during the 2008-2019 time range. Therefore, we had to pivot to backing out the velocity from the PPP files based on GNSS data instead.
