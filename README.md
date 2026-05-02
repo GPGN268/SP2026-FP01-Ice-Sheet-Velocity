@@ -1,5 +1,5 @@
 # SP2026-FP01-Ice-Sheet-Velocity
-Exploring the ice sheet velocity change of Whillans Ice Plain, West Antarctica between 2008 and 2019.
+Exploring the temporal and spatial variability in  ice sheet velocity change of Whillans Ice Plain, West Antarctica between 2008 and 2019.
 
 ## Project Title:  Ice Sheet Velocity Change at Whillans Ice Plain
 ## Name(s) & Handles: 
@@ -8,55 +8,45 @@ Exploring the ice sheet velocity change of Whillans Ice Plain, West Antarctica b
 - Kadidia Mariko -  kamam203
 
 ## Short Summary: 
-- This project will explore how the velocity of the Whillans Ice Plain in West Antarctica changed between 2008 and 2019, as well as how it changed spatially using GPS and GNSS data. The primary output will be figures showing the spatial and temporal patterns of velocity, as well as any correlations between velocity change and tidal forcings and between velocity change and the timing of stick-slip events.
+- This project will explore how the velocity of the Whillans Ice Plain in West Antarctica changed between 2008 and 2019, as well as how it changed spatially using GPS and GNSS data. The primary output is figures that show preprocessing changes, the spatial and temporal patterns of velocity, and correlations between velocity change stick-slip events.
+
+## How to Use Repository: 
+ &nbsp; The main code for this workflow can be found in the Notebooks folder in the extract_and_preproc notebook. In order to run it, two files will need to be downloaded from the Katz et al., 2026 Zenodo: the PPP.zip and the Events.zip. The files then need to be extracted and placed in a Data folder in the SP2026-FP01-Ice-Sheet-Velocity directory. Adjust the directory such that these path configurations are accurate: PPP_dir = "../Data/PPP/PPP/"
+Events_csv = "../Data/whillans_velocity_per_event.csv". The script in the extract notebook is fully contained. Once it runs, the figure notebooks can be run in any order. Each figure notebook takes inputs that are generated from the extraction notebook and outputs figures in the figure file. It is worth noting that the extraction notebook has a run time of about 3 hours, however, the cleaned and preprocessed data is save to a csv in the data directory so that any figure can be generated and edited without having to rerun that notebook more than once.   
 
 ## Introduction:
 ![Ice Study Location](images/IceStudyLocation.gif)
 Figure demonstrating location of Whillans Ice Plain [1]. 
  
-- Where:
-  - Whillans Ice Plain (WIP) is the lower part of the Mercer and Whillans ice stream in West Antarctica. It drains from the interior ice of the West Antarctic Ice Sheet onto the Ross Ice Shelf[1].
-- Why do we care about this ice stream: 
-  - Ice changes in Antarctica are usually due to activity in the ice streams, and understanding the conditions that lead to different ice stream acceleration changes helps to determine how sea level may change in the future. Both deceleration and stick-slip motion of the ice stream could cause it to stagnate (as seen in nearby streams like Kamb). Significant changes in Whillans ice stream speak to the stabilization of the West Antarctica ice sheet and how sea level rise will be affected going forward [3-7].
+&nbsp; Whillans Ice Plain (WIP) is the lower part of the Mercer and Whillans ice stream in West Antarctica. It drains from the interior ice of the West Antarctic Ice Sheet onto the Ross Ice Shelf[1]. Ice changes in Antarctica are usually due to activity in the ice streams, and understanding the conditions that lead to different ice stream acceleration changes helps to determine how sea level may change in the future. Both deceleration and stick-slip motion of the ice stream could cause it to stagnate (as seen in nearby streams like Kamb). Significant changes in Whillans ice stream speak to the stabilization of the West Antarctica ice sheet and how sea level rise will be affected going forward [3-7].
 
-- Evidence for possible correlations between velocity and tidal forcings and stick-slip event timings:
-  -  Rather than being governed by continuous flow, one of the drivers of the motion is stick-slip events. These events cause the ice sheet to move forward by about 0.2-0.6 m in about 30-60 minutes, either once or twice a day, depending on the tidal features. Namely, in order to have a secondary slip in a day, there must be a low-moderate tide height and a semi-diurnal tidal cycle [3].
-- Current paaterns we are seeing:
-  - Examination of the long-term velocity time series shows that the deceleration is not occurring at a steady rate but varies on smaller time scales. Additionally, based on point location measurements, the velocity deceleration is non-uniform across the ice sheet as well as through time [2].
-- Why we care about the spatial and temporal resolution over time: 
-  - The spatial and temporal resolution over time determines how ice is moving in the interior of the ice stream and at the margins. Having constraints of this motion beyond just the point measurements we currently have allows us to better estimate how the Whillans ice stream motion will behave in the future, which is a factor involved in sea-level rise and how climate change impacts the cryosphere [1].
-
-- Expected result: 
-  - Based on current GPs records and a catalog of stick-slip events, it is expected to find that Whillians deceleration varies through time (such as on interannual timescales) and that this variability also varies spatially. There are currently GNSS-derived average velocities that show the velocity is correlated with tidal forces. The derived velocities from ITS_LIVE should also show these tidal forcing, and time heterogeneities and also show the spatial variability which is not currently clear. [3-6].
-
-- How does it answer a useful question:
-  - Using GPS/GNSS data to look at the velocity changes over time provides greater insight as to how the velocity change has varied spatially. Additionally, this project aims to make connections between velocity changes, tidal forcings, and the timing of stick-slip events. 
-
-## Problem Statement, questions and/or objectives: 
-- Statement:
-  - Although GPS studies have shown at specific locations that ice sheet velocity at Whillans Ice Stream has slowed, how that deceleration has changed over the full ice sheet, how the velocity fluctuates across different time scales, and if there is a correlation between the velocity change and stick-slip events and tidal forcings, is still not well documented.
-
-- Questions:
-  - Are there detectable relationships between ice surface velocity, timing of stick-slip events, and tidal forcings?
-  - How has the temporal variability of ice surface velocity changed between 2008 and 2019, and how does it vary on seasonal/decadal timescales?
-  - What are the spatial patterns of ice surface velocity/how does the magnitude of velocity slowing vary between different features of the ice sheet (such as the grounding zone, the middle of the ice sheet, and the margins). 
+ &nbsp;  Rather than being governed by continuous flow, one of the drivers of the motion is stick-slip events. These events cause the ice sheet to move forward by about 0.2-0.6 m in about 30-60 minutes, either once or twice a day, depending on the tidal features. Namely, in order to have a secondary slip in a day, there must be a low-moderate tide height and a semi-diurnal tidal cycle [3].
  
+ &nbsp;  Since the spatial and temporal resolution over time determines how ice is moving in the interior of the ice stream and at the margins, having better constraints of this motion would allow us to better estimate how the Whillans ice stream motion will behave in the future[1].
+
+ &nbsp;  Based on current GPS records and a catalog of stick-slip events, it is expected to find that Whillians deceleration varies through time (such as on interannual timescales) and that the velocity varies spatially across features such as the grounding line and grounded versus floating ice[3-6].
+ 
+## Research Questions: 
+- How does the ice sheet velocity vary across Whillans Ice Plain on a decadal time scale?
+
+- How is the temporal variation in ice sheet velocity correlated to the amount of 12 versus 24-hour slip events that occur? 
+  
 - Objectives:
   - Compute and clean velocity from PPP files derived from GNSS data at various GPS locations across Whillans Ice Plain to produce figures that show how velocity has changed over time and space.
-  - Identify correlations between velocity, tidal forcings, and stick-slip timings.
+  - Identify correlations between velocity and stick-slip timings.
 
 ## Datasets:
-- Whillans Ice Plain GNSS RINEX, Kinematic Positions, and Stick-Slip Event Catalog 
+- Whillans Ice Plain GNSS RINEX, Kinematic Positions, and Stick-Slip Event Catalog [PPP Files from Zenodo](https://zenodo.org/records/17797751)
 
 ## Tools/Packages: 
-- Itslive-py
-- Xarray
-- Pyproj 
-- Scipy 
-- Pandas 
-- Numpy
-- Matplotlib 
-- Cartopy
+- Os [Os](https://docs.python.org/3/library/os.html)
+- Pyproj [Pyproj](https://pyproj4.github.io/pyproj/latest/)
+- Scipy [Scipy](https://docs.scipy.org/doc/scipy/)
+- Pandas [Pandas](https://pypi.org/project/pandas/#documentation)
+- Numpy [Numpy](https://numpy.org/)
+- Matplotlib [Matplotlib](https://matplotlib.org/)
+- Cartopy [Cartopy](https://cartopy.readthedocs.io/stable/)
+- Glob [Glob](https://docs.python.org/3/library/glob.html)
 
 
 
@@ -68,29 +58,25 @@ Figure demonstrating location of Whillans Ice Plain [1].
 - Loop over every station and then concatenate it into one file 
 - Use the daily velocity estimates in a 30-day window to compute a median value for each station for each of the icequakes 
 - Create figures that tell the story of this data 
-  - Looking at outliers of the position (to justify smoothing with the median versus the mean)
+  - Show why smoothing with the 30-day median shows useful signal 
   - Creating a time series of the background velocity with spatial coordinates/cartopy in the background  
   - Show different smoothing techniques to clean the background velocity data 
   - Plot of velocity time series (one for each station)
   - Plot how the change in velocity corresponds to the stick-slip events 
-## Figure Creation:
-- Figure 1: Plot raw 15-second epoch positions (scatter of lat/long or projected east/north), color-coded by rmsp. Overlay the position threshold = 0.05m cutoff line on a histogram inset to show how many epochs are dropped. This will need to live inside the first function. 
-- Figure 2: A 2D pcolormesh with time on the x-axis, station (sorted spatially) on the y-axis, and the 30-day smoothed velocity as color. Use cartopy basemap as context. 
-- Figure 3: Three panel plot for one representative station showing (a) raw inter-epoch velocity, (b) daily median velocity, (c) 30-day rolling median. Let's add noise stats (like std) to each panel also. 
-- Figure 4: One line per station for velocity time-series (let's make those lines semi-transparent) then a more opaque 30-daysmoothed line on top with a colormap to show spatail coherence across the ice stream
-- Figure 5: For each station plot the 30-day background velocity as a time series. Overlay vertical lines at each icequake start time. Could also add a second-axis with the time between slips. 
-## Expected outcomes:
-- Expected observations:
-  - The velocity is decreasing over time and is non-uniform across the ice plain. 
-  - The velocity acceleration changes are correlated with timing of stick-slip events and tidal forcings.   
-- Figure 1: Visualization of outliers/noise in the position value at each 15-second interval 
-- Figure 2: Colormesh showing velocity change compared to spatial coordinates across the area of interest between 2008-2019
-- Figure 3: Multi-panel comparison of how different smoothing techniques affect the background velocity data 
-- Figure 4: Plot of velocity time series (one line for each station) 
-- Figure 5: Plot that shows how the changes in velocity are correlated with the timing of stick-slip events on a decadal timescale
+
+## Results Summary: 
+ &nbsp; The 30-day smoothed velocity records show a deceleration of Whillans Ice Plain across the observation period. Figures 4 and 5 both show that overall the velocity was considerably higher in the early part of the record (2008-2011) than by the end (2017-2018). However, this slowdown is not uniform across the ice plain. Figure 2 shows that gz-series stations near the western margin consistently record the highest velocities, while la- and mg-series stations further into the interior record lower velocities throughout. The spatial gradient visible in Figure 2's map panel is consistent with ice flowing fastest near the margins. Importantly, the deceleration appears across all station locations rather than localized to any one part of the ice plain, suggesting an overarching change in the ice stream over this period.
+
+ &nbsp; Figure 5 shows how velocity and slip timing relate to each other inversely. The 30-day median time to the next slip event aligns with the velocity through the early part of the record, with both showing similar low-frequency variability between 2008 and roughly 2014. After around 2015, the two series begin to diverge. As velocity declines, the time between slip events becomes longer and more variable. This is consistent with a shift toward longer-period slip recurrence as the ice stream slows, since a slower-moving ice stream takes longer to build up the stress needed to trigger the next slip event. This suggests that the decadal slowdown may have shifted the slip cycle away from shorter semi-diurnal recurrence and toward longer diurnal recurrence over the observation period.
+
+## Contribution Statement: 
+- Kaitlyn: Extraction and preprocessing, project introduction, slideshow, figure 1 and 3 interpretation, findings analysis, README final requirements, repository formatting  
+- Emilia: Figure 2, 4, and 5 and the corresponding interpretation, repository clean up, and README picture 
+- Kadida: Stats, exploratory figures, Figure 1 and 3, and initial README updates  
 
 ## Anticipated Challenges: 
 - We were originally going to use ITS_LIVE velocity data derived from Sentinel-1. However, there was a gap in coverage for this region of Antarctica during the 2008-2019 time range. Therefore, we had to pivot to backing out the velocity from the PPP files based on GNSS data instead.
+- The positions from the PPP were taken at 15 second intervals, so deriving the velocity was too noisy to capture meaninful long term signals. 
 
 ## References:
 [1]
