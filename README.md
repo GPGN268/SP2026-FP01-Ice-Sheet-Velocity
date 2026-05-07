@@ -35,7 +35,7 @@ Figure demonstrating location of Whillans Ice Plain [1].
   - Identify correlations between velocity and stick-slip timings.
 
 ## Datasets:
-- Whillans Ice Plain GNSS RINEX, Kinematic Positions, and Stick-Slip Event Catalog [PPP Files and Station Metadata from Zenodo](https://zenodo.org/records/17797751)
+- Whillans Ice Plain GNSS RINEX, Kinematic Positions, Stick-Slip Event Catalog, and Station Metadata [PPP Files and Station Metadata from Zenodo](https://zenodo.org/records/17797751)
 - Whillans Ice Plain Stick Slip Events [Event catalog](https://github.com/MinesGlaciology/whillans-surf/blob/main/notebooks/data_preproc/09-18.csv)
 
 ## Tools/Packages: 
